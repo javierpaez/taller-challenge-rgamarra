@@ -1,0 +1,246 @@
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2024-12-20 19:20:42.828131', '2024-12-20 19:20:42.828134') RETURNING "key"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateBooks (20241220191448)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "books" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "author" varchar, "publication_date" date, "rating" integer, "status" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20241220191448') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateBooks (20241220191448)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[35mDROP TABLE "books"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.1ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20241220191448'[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateBooks (20241220191448)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "books" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "author" varchar, "publication_date" date, "rating" integer, "status" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20241220191448') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/books" for ::1 at 2024-12-20 16:52:15 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#create as */*
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.0ms | Allocations: 8709)
+
+
+  
+NoMethodError (undefined method `permit' for nil:NilClass
+
+    params[:book].permit(:title, :author, :publication_date)
+                 ^^^^^^^):
+  
+app/controllers/books_controller.rb:9:in `valid_params'
+app/controllers/books_controller.rb:3:in `create'
+Started POST "/books" for ::1 at 2024-12-20 16:53:00 -0300
+Processing by BooksController#create as */*
+  Parameters: {"book"=>{"title"=>"Example Title"}}
+Completed 422 Unprocessable Content in 39ms (ActiveRecord: 3.4ms | Allocations: 11668)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Author can't be blank, Publication date can't be blank, Rating is not included in the list, Status is not included in the list):
+  
+app/controllers/books_controller.rb:3:in `create'
+Started POST "/books" for ::1 at 2024-12-20 16:53:16 -0300
+Processing by BooksController#create as */*
+  Parameters: {"book"=>{"title"=>"Example Title", "author"=>"Example Author"}}
+Completed 422 Unprocessable Content in 5ms (ActiveRecord: 0.0ms | Allocations: 1180)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Publication date can't be blank, Rating is not included in the list, Status is not included in the list):
+  
+app/controllers/books_controller.rb:3:in `create'
+Started POST "/books" for ::1 at 2024-12-20 16:53:42 -0300
+Processing by BooksController#create as */*
+  Parameters: {"book"=>{"title"=>"Example Title", "author"=>"Example Author", "publication_date"=>"19/12/2024"}}
+Completed 422 Unprocessable Content in 8ms (ActiveRecord: 0.0ms | Allocations: 894)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Rating is not included in the list, Status is not included in the list):
+  
+app/controllers/books_controller.rb:3:in `create'
+Started POST "/books" for ::1 at 2024-12-20 16:54:29 -0300
+Processing by BooksController#create as */*
+  Parameters: {"book"=>{"title"=>"Example Title", "author"=>"Example Author", "publication_date"=>"19/12/2024", "rating"=>4, "status"=>"available"}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/books_controller.rb:3:in `create'
+  [1m[36mBook Create (2.8ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "publication_date", "rating", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "Example Title"], ["author", "Example Author"], ["publication_date", "2024-12-19"], ["rating", 4], ["status", "available"], ["created_at", "2024-12-20 19:54:29.929059"], ["updated_at", "2024-12-20 19:54:29.929059"]]
+  ↳ app/controllers/books_controller.rb:3:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/books_controller.rb:3:in `create'
+Completed 204 No Content in 15ms (ActiveRecord: 6.4ms | Allocations: 6886)
+
+
+Started POST "/books" for ::1 at 2024-12-20 16:54:50 -0300
+  
+SyntaxError (/Users/ricardogamarra/Code/personal/taller-challenge-rgamarra/books-api/app/controllers/books_controller.rb:5: syntax error, unexpected ':', expecting `end'
+    return json: book
+               ^
+):
+  
+app/controllers/books_controller.rb:5: syntax error, unexpected ':', expecting `end'
+Started POST "/books" for ::1 at 2024-12-20 16:55:08 -0300
+  
+SyntaxError (/Users/ricardogamarra/Code/personal/taller-challenge-rgamarra/books-api/app/controllers/books_controller.rb:5: syntax error, unexpected ':', expecting `end'
+    return json: { book: book }
+               ^
+):
+  
+app/controllers/books_controller.rb:5: syntax error, unexpected ':', expecting `end'
+Started POST "/books" for ::1 at 2024-12-20 16:55:37 -0300
+Processing by BooksController#create as */*
+  Parameters: {"book"=>{"title"=>"Example Title", "author"=>"Example Author", "publication_date"=>"19/12/2024", "rating"=>4, "status"=>"available"}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/books_controller.rb:3:in `create'
+  [1m[36mBook Create (1.6ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "publication_date", "rating", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "Example Title"], ["author", "Example Author"], ["publication_date", "2024-12-19"], ["rating", 4], ["status", "available"], ["created_at", "2024-12-20 19:55:37.271026"], ["updated_at", "2024-12-20 19:55:37.271026"]]
+  ↳ app/controllers/books_controller.rb:3:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/books_controller.rb:3:in `create'
+Completed 200 OK in 12ms (Views: 0.4ms | ActiveRecord: 6.7ms | Allocations: 6601)
+
+
+Started POST "/books" for ::1 at 2024-12-20 16:55:45 -0300
+Processing by BooksController#create as */*
+  Parameters: {"book"=>{"title"=>"Example Title", "author"=>"Example Author", "publication_date"=>"19/12/2024", "rating"=>10, "status"=>"available"}}
+Completed 422 Unprocessable Content in 4ms (ActiveRecord: 0.0ms | Allocations: 658)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Rating is not included in the list):
+  
+app/controllers/books_controller.rb:3:in `create'
+Started POST "/books" for ::1 at 2024-12-20 16:55:57 -0300
+Processing by BooksController#create as */*
+  Parameters: {"book"=>{"title"=>"Example Title", "author"=>"Example Author", "publication_date"=>"19/12/2024", "rating"=>4, "status"=>"bad status"}}
+Completed 422 Unprocessable Content in 12ms (ActiveRecord: 0.0ms | Allocations: 575)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Status is not included in the list):
+  
+app/controllers/books_controller.rb:3:in `create'
+Started POST "/books" for ::1 at 2024-12-20 16:56:04 -0300
+Processing by BooksController#create as */*
+  Parameters: {"book"=>{"title"=>"Example Title", "author"=>"Example Author", "publication_date"=>"19/12/2024", "rating"=>4, "status"=>"reserved"}}
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/books_controller.rb:3:in `create'
+  [1m[36mBook Create (1.6ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "publication_date", "rating", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "Example Title"], ["author", "Example Author"], ["publication_date", "2024-12-19"], ["rating", 4], ["status", "reserved"], ["created_at", "2024-12-20 19:56:04.493404"], ["updated_at", "2024-12-20 19:56:04.493404"]]
+  ↳ app/controllers/books_controller.rb:3:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/books_controller.rb:3:in `create'
+Completed 200 OK in 40ms (Views: 1.2ms | ActiveRecord: 2.5ms | Allocations: 2052)
+
+
+Started GET "/books" for ::1 at 2024-12-20 16:58:04 -0300
+  
+SyntaxError (/Users/ricardogamarra/Code/personal/taller-challenge-rgamarra/books-api/app/controllers/books_controller.rb:7: syntax error, unexpected local variable or method, expecting '}'
+      books: books
+      ^~~~~
+/Users/ricardogamarra/Code/personal/taller-challenge-rgamarra/books-api/app/controllers/books_controller.rb:22: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/books_controller.rb:7: syntax error, unexpected local variable or method, expecting '}'
+app/controllers/books_controller.rb:22: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/books" for ::1 at 2024-12-20 16:58:16 -0300
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:6:in `index'
+Completed 200 OK in 24ms (Views: 0.6ms | ActiveRecord: 2.9ms | Allocations: 8158)
+
+
+Started GET "/books" for ::1 at 2024-12-20 16:59:43 -0300
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:6:in `index'
+Completed 200 OK in 11ms (Views: 1.0ms | ActiveRecord: 2.7ms | Allocations: 5902)
+
+
+Started POST "/books" for ::1 at 2024-12-20 17:00:00 -0300
+Processing by BooksController#create as */*
+  Parameters: {"book"=>{"title"=>"Example Title 1", "author"=>"Example Author 1", "publication_date"=>"19/12/2024", "rating"=>1, "status"=>"reserved"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/books_controller.rb:12:in `create'
+  [1m[36mBook Create (2.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "publication_date", "rating", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "Example Title 1"], ["author", "Example Author 1"], ["publication_date", "2024-12-19"], ["rating", 1], ["status", "reserved"], ["created_at", "2024-12-20 20:00:00.853115"], ["updated_at", "2024-12-20 20:00:00.853115"]]
+  ↳ app/controllers/books_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/books_controller.rb:12:in `create'
+Completed 200 OK in 15ms (Views: 0.4ms | ActiveRecord: 3.3ms | Allocations: 2349)
+
+
+Started POST "/books" for ::1 at 2024-12-20 17:00:13 -0300
+Processing by BooksController#create as */*
+  Parameters: {"book"=>{"title"=>"Example Title 2", "author"=>"Example Author 2", "publication_date"=>"19/12/2024", "rating"=>22, "status"=>"available"}}
+Completed 422 Unprocessable Content in 9ms (ActiveRecord: 0.0ms | Allocations: 658)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Rating is not included in the list):
+  
+app/controllers/books_controller.rb:12:in `create'
+Started POST "/books" for ::1 at 2024-12-20 17:00:20 -0300
+Processing by BooksController#create as */*
+  Parameters: {"book"=>{"title"=>"Example Title 2", "author"=>"Example Author 2", "publication_date"=>"19/12/2024", "rating"=>2, "status"=>"available"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/books_controller.rb:12:in `create'
+  [1m[36mBook Create (1.7ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "publication_date", "rating", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "Example Title 2"], ["author", "Example Author 2"], ["publication_date", "2024-12-19"], ["rating", 2], ["status", "available"], ["created_at", "2024-12-20 20:00:20.223202"], ["updated_at", "2024-12-20 20:00:20.223202"]]
+  ↳ app/controllers/books_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/books_controller.rb:12:in `create'
+Completed 200 OK in 13ms (Views: 1.1ms | ActiveRecord: 2.6ms | Allocations: 2052)
+
+
+Started POST "/books" for ::1 at 2024-12-20 17:00:26 -0300
+Processing by BooksController#create as */*
+  Parameters: {"book"=>{"title"=>"Example Title 3", "author"=>"Example Author 3", "publication_date"=>"19/12/2024", "rating"=>3, "status"=>"available"}}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/books_controller.rb:12:in `create'
+  [1m[36mBook Create (2.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "publication_date", "rating", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "Example Title 3"], ["author", "Example Author 3"], ["publication_date", "2024-12-19"], ["rating", 3], ["status", "available"], ["created_at", "2024-12-20 20:00:26.755287"], ["updated_at", "2024-12-20 20:00:26.755287"]]
+  ↳ app/controllers/books_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/books_controller.rb:12:in `create'
+Completed 200 OK in 26ms (Views: 0.8ms | ActiveRecord: 2.9ms | Allocations: 2057)
+
+
+Started GET "/books" for ::1 at 2024-12-20 17:00:30 -0300
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:6:in `index'
+Completed 200 OK in 8ms (Views: 1.7ms | ActiveRecord: 0.2ms | Allocations: 1119)
+
+
+Started PUT "/books/3" for ::1 at 2024-12-20 17:04:31 -0300
+Processing by BooksController#update as */*
+  Parameters: {"status"=>"available", "id"=>"3", "book"=>{"status"=>"available"}}
+[31mUnpermitted parameters: :id, :book. Context: { controller: BooksController, action: update, request: #<ActionDispatch::Request:0x000000011807c358>, params: {"status"=>"available", "controller"=>"books", "action"=>"update", "id"=>"3", "book"=>{"status"=>"available"}} }[0m
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:20:in `update'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/books_controller.rb:21:in `update'
+  [1m[36mBook Update (0.8ms)[0m  [1m[33mUPDATE "books" SET "status" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["status", "available"], ["updated_at", "2024-12-20 20:04:31.704570"], ["id", 3]]
+  ↳ app/controllers/books_controller.rb:21:in `update'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/books_controller.rb:21:in `update'
+Completed 200 OK in 12ms (Views: 0.4ms | ActiveRecord: 3.0ms | Allocations: 7481)
+
+
+Started GET "/books" for ::1 at 2024-12-20 17:04:35 -0300
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.2ms | Allocations: 1206)
+
+
